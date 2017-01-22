@@ -47,15 +47,6 @@ app.get('/portfolio', function(req, res){
   res.render('portfolio');
 })
 
-
-
-
-
-
-
-
-
-
 app.listen(3000, function(){
   console.log('Listening on port 3000....');
 })
