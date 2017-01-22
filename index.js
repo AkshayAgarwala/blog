@@ -9,6 +9,7 @@ app.set('views', './views');
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.use(express.static('./public'));
 
 var connectionString = 'postgres://' + process.env.POSTGRES_USER + ':' + process.env.POSTGRES_PASSWORD + '@localhost:5432/blog';
 
@@ -42,6 +43,9 @@ app.get('/blog/:post_id', function(req, res){
   })
 })
 
+app.get('/portfolio', function(req, res){
+  res.render('portfolio');
+})
 
 
 
